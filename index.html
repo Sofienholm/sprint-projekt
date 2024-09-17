@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Øl Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       .question, .landing { display: none; } /* By default, everything is hidden */
+       .active { display: block; } /* Active elements are displayed */
+    </style>
+</head>
+<body>
+    
+    <div id="landing" class="active">
+        <h1>Hvilken øl passer til dig?</h1>
+        <button onclick="startQuiz()">Start quizzen nu</button>
+    </div>
+
+    <div id="question1" class="question">
+        <p>Hvilken smagsprofil foretrækker du i en øl?</p>
+        <input type="radio" name="taste" value="bitter"> Bitter<br>
+        <input type="radio" name="taste" value="sød"> Sød<br>
+        <input type="radio" name="taste" value="sur"> Sur<br>
+        <button onclick="nextQuestion(1)">Næste</button>
+    </div>
+
+    <div id="question2" class="question">
+        <p>Hvilken type øl drikker du oftest?</p>
+        <input type="radio" name="type" value="IPA"> IPA<br>
+        <input type="radio" name="type" value="sour"> Sour<br>
+        <input type="radio" name="type" value="stout"> Stout<br>
+        <input type="radio" name="type" value="Pale Ale"> Pale Ale<br>
+        <input type="radio" name="type" value="lager"> Lager<br>
+        <button onclick="nextQuestion(2)">Næste</button>
+    </div>
+
+    <div id="question3" class="question">
+        <p>Hvor stærk foretrækker du din øl?</p>
+        <input type="radio" name="strength" value="let"> Let (under 4%)<br>
+        <input type="radio" name="strength" value="medium"> Medium (4-6%)<br>
+        <input type="radio" name="strength" value="stærk"> Stærk (over 6%)<br>
+        <button onclick="nextQuestion(3)">Næste</button>
+    </div>
+
+    <div id="question4" class="question">
+        <p>Hvilken farve på øl foretrækker du?</p>
+        <input type="radio" name="color" value="lys"> Lys<br>
+        <input type="radio" name="color" value="mørk"> Mørk<br>
+        <input type="radio" name="color" value="ingen"> Ingen præference<br>
+        <button onclick="nextQuestion(4)">Næste</button>
+    </div>
+
+    <div id="question5" class="question">
+        <p>Hvilken prisklasse passer bedst til dit budget?</p>
+        <input type="radio" name="price" value="billig"> Billig (under 30 kr.)<br>
+        <input type="radio" name="price" value="mellem"> Mellem (30-50 kr.)<br>
+        <input type="radio" name="price" value="dyr"> Dyr (over 50 kr.)<br>
+        <button onclick="getResult()">Få resultat</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+     
+    
