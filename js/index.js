@@ -1,3 +1,6 @@
+let taste, type, strength, color, price;
+
+// Funktion til at starte quizzen
 function startQuiz() {
     console.log('Start Quiz clicked');
     let landingElement = document.getElementById("landing");
@@ -6,38 +9,52 @@ function startQuiz() {
     if (landingElement) {
       console.log('Landing element found');
       landingElement.classList.remove("active");
-      
-      // Completely hide the landing page
-      landingElement.style.display = 'none';
+      landingElement.style.display = 'none'; // Skjul landingpage
     }
     
     if (questionElement) {
       console.log('Question element found');
-      questionElement.classList.add("active");
+      questionElement.classList.add("active"); // Vis første spørgsmål
     }
 }
-let taste, type, strength, color, price;
 
+// Funktion til at navigere til næste spørgsmål
 function nextQuestion(current) {
-  // Hent og gem brugerens valg
-  if (current === 1) {
-    taste = document.querySelector('input[name="taste"]:checked').value;
-  } else if (current === 2) {
-    type = document.querySelector('input[name="type"]:checked').value;
-  } else if (current === 3) {
-    strength = document.querySelector('input[name="strength"]:checked').value;
-  } else if (current === 4) {
-    color = document.querySelector('input[name="color"]:checked').value;
-  } else if (current === 5) {
-    price = document.querySelector('input[name="price"]:checked').value;
+  // Tjek for valg af radioknapper
+  let selected = document.querySelector('input[name="' + getName(current) + '"]:checked');
+  if (!selected) {
+    alert("Vælg venligst et svar, før du går videre.");
+    return;
   }
 
-  // Skift til næste spørgsmål
+  // Gem valgte svar
+  if (current === 1) taste = selected.value;
+  if (current === 2) type = selected.value;
+  if (current === 3) strength = selected.value;
+  if (current === 4) color = selected.value;
+  if (current === 5) price = selected.value;
+
+  // Skift spørgsmål
   document.getElementById("question" + current).classList.remove("active");
   let next = current + 1;
-  document.getElementById("question" + next).classList.add("active");
+  if (document.getElementById("question" + next)) {
+    document.getElementById("question" + next).classList.add("active");
+  }
 }
 
+// Funktion til at hente navnet på spørgsmålet baseret på dets nummer
+function getName(questionNumber) {
+  switch (questionNumber) {
+    case 1: return 'taste';
+    case 2: return 'type';
+    case 3: return 'strength';
+    case 4: return 'color';
+    case 5: return 'price';
+    default: return '';
+  }
+}
+
+// Funktion til at få resultatet og gemme det i localStorage
 function getResult() {
     let resultText = "";
     let alternative1 = "";
@@ -93,5 +110,4 @@ function getResult() {
   
     // Naviger til resultat side
     window.location.href = "result.html";
-  }
-  
+}

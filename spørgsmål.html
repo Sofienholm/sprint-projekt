@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Øl Quiz</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
-       
-       .active { display: block; } /* Active elements are displayed */
-       
+      .question { display: none; } /* Skjul alle spørgsmål som standard */
+      .active { display: block; } /* Vis aktive elementer */
     </style>
 </head>
 
@@ -18,7 +17,7 @@
     
     
 
-    <div id="question1" class="question">
+    <div id="question1" class="question active"> <!-- Første spørgsmål er aktivt -->
         <p>Hvilken smagsprofil foretrækker du i en øl?</p>
         <input type="radio" name="taste" value="bitter"> Bitter<br>
         <input type="radio" name="taste" value="sød"> Sød<br>
@@ -64,7 +63,7 @@
 
     <div id="result"></div>
 
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
 
