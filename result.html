@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dit Ølresultat</title>
+    <link rel="stylesheet" href="styleresult.css">
+</head>
+<body>
+    
+    <h1>Din Øl</h1>
+    <p id="mainResult"></p>
+    <h2>Alternative øl, du måske også vil kunne lide:</h2>
+    <ul>
+        <li id="alt1"></li>
+        <li id="alt2"></li>
+    </ul>
+
+    <script>
+        // Hent data fra lokal storage
+        document.getElementById('mainResult').innerText = localStorage.getItem('mainResult');
+        document.getElementById('alt1').innerText = localStorage.getItem('alt1');
+        document.getElementById('alt2').innerText = localStorage.getItem('alt2');
+    </script>
+</body>
+</html>

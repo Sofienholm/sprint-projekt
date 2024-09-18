@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Øl Quiz</title>
     <link rel="stylesheet" href="style.css">
     <style>
-       .question, .landing { display: none; } /* By default, everything is hidden */
+       
        .active { display: block; } /* Active elements are displayed */
+       
     </style>
 </head>
+
+
 <body>
     
-    <div id="landing" class="active">
-        <h1>Hvilken øl passer til dig?</h1>
-        <button onclick="startQuiz()">Start quizzen nu</button>
-    </div>
+    
 
     <div id="question1" class="question">
         <p>Hvilken smagsprofil foretrækker du i en øl?</p>
@@ -58,6 +59,8 @@
         <input type="radio" name="price" value="dyr"> Dyr (over 50 kr.)<br>
         <button onclick="getResult()">Få resultat</button>
     </div>
+
+
 
     <div id="result"></div>
 
