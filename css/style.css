@@ -4,39 +4,79 @@ body {
     padding-right: 30px;
     padding-bottom: 50px;
     padding-left: 80px;  
+    background-image: url(../images/qq.png); 
     background-size: cover;
+    background-position: center;
+   
+   
 }
 
 button {
-    background-color: #36b827; /* Baggrundsfarve */
+    background-color: #fcfcfc9e; /* Baggrundsfarve */
     color: white; /* Tekstfarve */
-    padding: 15px 30px; /* Indvendig margen (størrelse på knappen) */
-    font-size: 18px; /* Skriftstørrelse */
+    padding: 25px 50px; /* Indvendig margen (størrelse på knappen) */
+    font-size: 25px; /* Skriftstørrelse */
     border: none; /* Fjerner kant */
     border-radius: 10px; /* Runder kanterne */
     cursor: pointer; /* Skifter til pointer ved hover */
     transition: background-color 0.3s; /* Tilføjer en jævn overgang på hover */
+    margin-top: 25px;
 }
 
-  h1{
-    text-align: center;
-    font-size: 15mm;
-  }
-  startQuiz{
-    text-align: center;
-  }
+input[type="radio"] {
+  appearance: none; /* Fjern standardudseendet */
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #ffffff; 
+  outline: none;
+  cursor: pointer;
+  margin-right: 30px;
+
+}
+
+input[type="radio"]:checked {
+  background-color: #ffffff; /* Fyld den grøn, når den er valgt */
+  border-color: #ffffff;
+}
+
+
+  
   div{
     text-align: center;
+    font-size: 10mm;
+    color: white;
+
   }
-.landing{background-image:url('images/baggrundtræ.png');}
- .question {
- font-size: 10mm;
- font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- background-image: url('images/wood-background-realistic_107791-102.avif');
- background-size: cover;
+
+ 
+
+/* Style for svar (radioknapper og labels) */
+.answer-box {
+    border: 8px solid white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 25px auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 20%;
+    text-align: left;
+
+}
+.answer-box:hover{color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0.5);}
+
+
+  p {
+    border: 15px solid rgb(255, 255, 255);
+    border-style: double;
+    border-radius: 5px;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 40px;
+    margin-bottom: 120px;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    
   }
- 
- 
  
   p{
     font-size: 15mm;
