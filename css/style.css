@@ -1,18 +1,17 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif
     padding-top: 170px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px;  
     background-image: url(../images/qq.png); 
     background-size: cover;
     
-   
-   
+ 
+}
+:root {
+  --denorange: #ff984f; 
 }
 
 button {
-    background-color: #fcfcfc9e; /* Baggrundsfarve */
+    background-color: #ff984f; /* Baggrundsfarve */
     color: rgb(255, 255, 255); /* Tekstfarve */
     padding: 25px 50px; /* Indvendig margen (størrelse på knappen) */
     font-size: 25px; /* Skriftstørrelse */
@@ -21,6 +20,7 @@ button {
     cursor: pointer; /* Skifter til pointer ved hover */
     transition: background-color 0.3s; /* Tilføjer en jævn overgang på hover */
     margin-top: 25px;
+    box-shadow: 0px 0px 50px #000000;
 }
 
 input[type="radio"] {
@@ -28,24 +28,26 @@ input[type="radio"] {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  border: 2px solid color(255, 136, 0);
-  outline: none;
+  border: 5px solid #ffffff;
+  outline: none
   cursor: pointer;
   margin-right: 30px;
 
 }
 
 input[type="radio"]:checked {
-  background-color: #ffffff; /* Fyld den grøn, når den er valgt */
-  border-color: #ffffff;
+  background-color: #ff984f; /* Fyld den grøn, når den er valgt */
+  border-color: #ff984f;
 }
 
 
   
   div{
     text-align: center;
-    font-size: 10mm;
-    color: white;
+    font-size: 15mm;
+    color: #ff984f;
+    text-shadow:1px 1px 3px rgb(255, 34, 0), 0 0 10px rgb(58, 57, 57), 0 0 5px rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
   }
 
@@ -53,20 +55,21 @@ input[type="radio"]:checked {
 
 /* Style for svar (radioknapper og labels) */
 .answer-box {
-    border: 8px solid white;
+    border: 8px solid #ffffff;
     padding: 15px;
     border-radius: 8px;
     margin: 25px auto;
     background-color: rgba(255, 255, 255, 0.3);
-    width: 20%;
+    width: 50%;
     text-align: left;
+    box-shadow: 0px 0px 25px #000000;
 
 }
-.answer-box:hover{color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0.5);}
+.answer-box:hover{color: rgb(255, 0, 0); background-color: rgba(255, 255, 255, 0.5);}
 
 
   p {
-    border: 15px solid rgb(255, 255, 255);
+    border: 15px solid #ffffff;
     border-style: double;
     border-radius: 5px;
     margin-left: 500px;
@@ -75,12 +78,10 @@ input[type="radio"]:checked {
     margin-bottom: 120px;
     padding: 20px;
     color: rgb(255, 136, 0);
-    text-shadow: 5px 5px 10px #000000;
+    text-shadow: 1px 1px 3px rgb(255, 34, 0), 0 0 10px rgb(58, 57, 57), 0 0 5px rgb(0, 0, 0);
+    box-shadow: 0px 0px 25px #000000;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50%;
     
-  }
- 
-  p{
-    font-size: 15mm;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
