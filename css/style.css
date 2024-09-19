@@ -1,5 +1,5 @@
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif
     padding-top: 170px;
     padding-right: 30px;
     padding-bottom: 50px;
@@ -13,7 +13,7 @@ body {
 
 button {
     background-color: #fcfcfc9e; /* Baggrundsfarve */
-    color: white; /* Tekstfarve */
+    color: rgb(255, 255, 255); /* Tekstfarve */
     padding: 25px 50px; /* Indvendig margen (størrelse på knappen) */
     font-size: 25px; /* Skriftstørrelse */
     border: none; /* Fjerner kant */
@@ -28,7 +28,7 @@ input[type="radio"] {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  border: 2px solid #ffffff; 
+  border: 2px solid color(255, 136, 0);
   outline: none;
   cursor: pointer;
   margin-right: 30px;
@@ -74,7 +74,8 @@ input[type="radio"]:checked {
     margin-top: 40px;
     margin-bottom: 120px;
     padding: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 136, 0);
+    text-shadow: 5px 5px 10px #000000;
     
   }
  
